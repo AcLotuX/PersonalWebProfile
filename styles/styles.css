@@ -1,19 +1,23 @@
 body{
-    content: "";
     background-image: url("../img/webBackground.jpg");
     background-size: cover;
     background-attachment:fixed;
 }
 .content{
-    height: 100vh;
-}
-.content-nav{
-    background-color: black;
-    background: rgba(0,0,0,0.4);
-    max-width: 20%;
-    height:100%;
+    height: 100%;
 }
 
+/* Styles for Nav*/
+.content-nav{
+    display: inline-block;
+    background-color: black;
+    background: rgba(0,0,0,0.8);
+    max-width: 15%;
+    height: 100%;
+}
+.content-nav-resp{
+    display: none;
+}
 .content-nav .nav-logo{
     padding-top: 5%;
     text-align: center;
@@ -27,6 +31,7 @@ body{
 .content-nav .nav-list li{
     margin-top: 5px;
 }
+
 .content-nav .nav-list a{
     position: relative;
     overflow: hidden;
@@ -34,8 +39,7 @@ body{
     display:block;
     text-align: center;
 /*    transition: border .4s linear;*/
-    transition:box-shadow .6s,color .6s;
-    color:burlywood;
+    transition:box-shadow .6s,color 2s;
     text-decoration: none;
 }
 
@@ -54,7 +58,7 @@ body{
 }
 .content-nav .nav-list a:hover{
     color:antiquewhite;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0,0,0,0.8);
 /*    border-left: solid 20px;*/
     box-shadow:inset 0 0 25px 0 antiquewhite;
 /*    border-right: solid 20px;*/
@@ -67,8 +71,120 @@ body{
     left: 41%;
 }
 
-/*
-.content-nav .nav-list a:active{
-    background-color:antiquewhite;
-    color:black:
-}*/
+/* Styles for Main */
+.content-main{    
+    float: right;
+    display: inline-block;
+    padding: 1% 3%;
+    width: 85%;
+    color:#fff;
+    height: 100%;
+}
+.content-main .main-section1{
+}
+.content-main .main-section1 .section1-title{
+    
+    text-align: center;
+    font-size: ;
+    font-weight: bold;
+    margin-bottom:5%;
+}
+.content-main .main-section1{
+    margin-bottom: 3%;
+}
+.content-main .main-section1 .section1-img{
+    display: inline-block;
+    text-align: center;
+    width:20%;
+    margin-left: 2.5%;
+}
+.content-main .main-section1 .section1-img img{
+    max-width:100%;
+}
+
+.content-main .main-section1 .section1-content{
+/*    margin-left: 3%;*/
+    display: inline-block;
+    padding: 2%;
+}
+.content-main .main-section1 p{
+    text-align: justify;
+    float:left;
+    width: 77%;
+}
+.content-main .main-section2{
+    margin-left: -3%;
+    display: inline-block;
+    padding-top: 0 3%;
+}
+.content-main .main-section2 article{
+    display: inline-block;
+    width:30.33%;
+    float:left;
+    margin-left: 3%;
+    height: inherit;
+    padding: 2%;
+}
+.content-main .main-section2 article h2{
+    text-align: center;
+    padding: 0 0 3% 0;
+}
+.content-main .main-section2 article P{
+    text-align: justify;
+    padding: 3% 0;
+}
+
+
+/*Media Querys*/
+
+@media only screen and (max-width:480px) {
+    .content-nav{
+        display: none;
+    }
+    .content-nav-resp{
+        display: block;
+        height: 40px;
+        background-color: rgba(0,0,0,0.9);
+    }
+    .content-nav-resp span{
+        float: right;
+        font-size: 1.5em;
+        color: burlywood;
+        padding: 10px;
+        margin-right: 3%;
+    }
+    .content-main{
+        width: 100%;
+    }
+    .content-main .section1-content .section1-img{
+        display: block;
+        width:100%;
+        padding: 0;
+    }
+    .content-main .main-section1 p{
+        text-align: justify;
+        float: right;
+        width: 100%;
+    }
+    .content-main .main-section2{
+        margin: 0;
+    }
+    .content-main .main-section2 article{
+        display: inline-block;
+        width:100%;
+        margin: 0;
+        padding: 3%;
+        margin-bottom: 3%;
+    }
+}
+
+@media only screen and (max-width:1024px) {
+    .content-main .section1-content .section1-img{
+        float: right;
+    }
+    .content-main .main-section1 p{
+        float: none;
+        text-align: justify;
+        width:100%;
+    }
+}
