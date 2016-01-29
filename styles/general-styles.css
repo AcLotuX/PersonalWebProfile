@@ -1,0 +1,48 @@
+html{
+    height: 100%;
+    font-size:14px;
+}
+body{
+    height: 100%;
+    content: "";
+/*    font-family: 'Indie Flower', cursive;*/
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
+}
+.font-color1{
+    color:burlywood;
+}
+
+.background-box{
+    
+    border-radius: .8em;
+    background: rgba(0,0,0,0.9);
+}
+h1{
+/*    font-weight: 450;*/
+/*    font-width:200;*/
+    font-size: 3em;
+}
+
+h2{
+    font-size: 1.7em;
+}
+
+.a1{
+    font-size: 1.1em;
+}
+
+.p1{
+    font-size: 1.2em;
+}
+
+@media only screen and (max-width:480px) {
+    html {
+        font-size:20px;
+    }
+}
+@media only screen and (max-width:1024px) and (min-width:481px) {
+    html {
+        font-size:16px;
+    }
+}
